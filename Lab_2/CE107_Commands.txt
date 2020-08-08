@@ -1,0 +1,13 @@
+WDDN LAB_2
+CE107
+
+Commands for netmodule and dll file:
+
+1.For creating netmodule of add.cs file
+>csc  /t:module add.cs
+
+2.For creating netmodule of multiply.cs
+>csc  /t:module multiply.cs
+
+3.For creating single dll file
+>csc  /t:library /out:Calc.dll add.netmodule multiply.netmodule
