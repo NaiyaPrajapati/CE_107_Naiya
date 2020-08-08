@@ -1,0 +1,20 @@
+WDDN Lab_3
+CE107
+
+Following commands will create a strongly named .dll and deploy it on Global assembly cache :
+
+1.For generating key file
+>sn -k mykey.snk 
+
+2.For creating strongly name assembly signed by key in mykey.snk
+>csc /t:library /keyfile:mykey.snk calc.cs
+
+3.For installing calc.dll in Global assembly cache 
+>gacutil -i add.dll
+ 
+4.For signing new version of calc.cs with same key and .dll file  has same name as old .dll file
+>csc /t:library /keyfile:mykey.snk /out:add.dll add_new.cs
+
+5.For installing new version of calc.dll in Global assembly cache
+>gacutil -i add.dll 
+
